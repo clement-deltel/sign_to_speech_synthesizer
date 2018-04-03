@@ -477,7 +477,7 @@ def FondamentalLocal(time,data):
     while i <= len(data)-1:
         for j in range(1,100):
             i += 1
-    
+    #modification en cours
     return matriceTime, matriceData
 
 
