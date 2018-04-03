@@ -4,7 +4,6 @@
 
 Ceci est un script de test.
 Il faut parvenir a exploiter toutes les caracteristiques des signaux EMG
-Exploitation de la these HuaCAO
 """
 
 import matplotlib.pyplot as plt
@@ -467,8 +466,6 @@ def PowerSpectralDensity(frequence, data, method=1, norm=1, affiche=1):
 
 def FondamentalLocal(time,data):
     '''
-    
-    
     Cette fonction a pour but de recuperer les parties du signal ou la frequence es elevee
     Pour se faire, on calcule la transformee de Fourier sur de petits intervalles, et on
     regarde la valeur de la frequence fondamentale. Si cette derni`re depasse un certain seuil,
@@ -511,14 +508,16 @@ def Trace(abscisse, ordonnee, xMin, xMax, yMin, yMax):
      plt.plot(abscisse, ordonnee, '-', linewidth=1, color='black')
 
 
-    
-#Execution de la fonction
+#------------------------------------------------------------------------------
+#-----------------------Execution de la fonction-------------------------------
+#------------------------------------------------------------------------------
+
 '''
 SigEMG.csv
 On a 50 860 echantillons sur 12.715 secondes
 La frequence d'echantillonage de notre signal est donc : 4000Hz
 
-Premiers tests de Maxime
+Premiers tests de Maxime : Test1.csv
 La frequence d'echantillonage de notre signal est : 1280Hz
 
 '''
@@ -540,8 +539,8 @@ PowerSpectralDensity(freq2,fftEMGFiltr, method=1, norm=0, affiche=0)
 
 #--------------------Normalise--------------------
 dataNorm = Normalisation(tps, data, affiche=1)
-matTime, matData, Dep = SelectionData(tps, dataNorm, feData, 0.2, affiche=1)
-print(Dep)
+matTime, matData, premDepass = SelectionData(tps, dataNorm, feData, 0.2, affiche=1)
+print(premDepass)
 
 LowPassFilter(25, 400, tps, dataNorm, feData, norm=1, affiche=0)
 dataFiltrNorm = BandStopFilter(3, [45,55], tps, dataNorm, feData, norm=1, affiche=0)
