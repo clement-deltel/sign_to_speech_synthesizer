@@ -561,9 +561,6 @@ print("temps nécessaire = %.5e" %(time.time() - start))
 
 
 
-
-
-
 #--------------------Nouveaux tests--------------------
 
 #Recuperation de l'enveloppe du signal selon differentes frequences de coupure
