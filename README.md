@@ -11,5 +11,5 @@ Programme de traitement du signal EMG et récupération des données intéressan
 Ce qui ne fonctionne pas ou ce qui reste a completer en l'état actuel des choses :
 PSD -> périodogramme moyenné
 FondamentalLocal
-EctractSpecs
+ExtractSpecs
 Trace
